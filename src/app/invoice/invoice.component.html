@@ -1,0 +1,23 @@
+<p>invoice works!</p>
+
+<form [formGroup]="profileForm" (ngSubmit)="submitForm()">
+<input type="text" formControlName="name" required class="form-control">
+
+
+<button [disabled]="!profileForm.valid" class="btn btn-primary">
+    Save
+</button>
+
+</form>
+
+
+<div class="container mt-5">
+    <div class="row d-block">
+       <div> <input type="date" [(ngModel)]="mydate">
+
+       </div>
+
+
+<h1>Date: {{mydate | date:"MM/dd/yy" | uppercase}}</h1>
+    </div>
+</div>
